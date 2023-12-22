@@ -1,0 +1,32 @@
+.main {
+    background-color: rgba(0, 0, 0, 0.225);
+}
+
+h1{
+    font-family: cursive;
+    font-size: 3rem;
+}
+
+h2{
+    color: linear-gradient(to right, #3ca55c, #b5a449);
+
+}
+
+.main span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.main .child-1 {
+    background-color: red;
+}
+
+.main .child-2 {
+    background-color: rgb(255, 187, 0);
+}
+
+.main .child-3 {
+    background-color: green;
+}

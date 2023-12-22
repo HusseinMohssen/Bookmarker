@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="bg-info min-vh-100">
+        <div class="container p-5">
+            <h1 class="text-center">Bookmarker</h1>
+            <div class="p-5">
+                
+                <h2 class="text-center">
+                    <span><i class="fa-solid fa-bookmark"></i></span> 
+                    Bookmark your favorite sites 
+                    <span><i class="fa-solid fa-bookmark"></i></span>
+                </h2>
+                
+                <div class="p-3">
+                    <label for="sitName"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                    <input oninput="validationName()" id="sitName" type="text" placeholder="Bookmark Name" class="form-control">
+
+                    <div id="nameMessage" class="alert alert-danger d-none">Site name must contain at least 3 characters.....</div>
+                </div>
+    
+                <div class="p-3">
+                    <label for="sitUrl"><i class="fa-solid fa-link"></i> Site URL</label>
+                    <input oninput="validationUrl()" id="sitUrl" type="text" placeholder="Website URL" class="form-control">
+
+                    <div id="urlMessage" class="alert alert-danger d-none">Site URL must be a valid one.....</div>
+                </div>
+
+                <button onclick="addBookMark()" class="btn btn-primary mt-3 w-100">Submit</button>
+            </div>
+
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit Site</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div id="alertMessage" onclick="removeDnone()" class=" d-none main box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center">
+            <div class="w-25 min-vh-50 bg-white rounded p-3">
+                <div class="w-100 py-3 d-flex justify-content-between">
+                    <div>
+                        <span class="child-1"></span>
+                        <span class="child-2"></span>
+                        <span class="child-3"></span>
+                    </div>
+                    <div>
+                        <button onclick="removeDnone()" class="me-auto"><i class="fa-solid fa-x close"></i></button>
+                    </div>
+                </div>
+                <h5>Site Name or Url is not valid, Please follow the rules below :</h5>
+                <ol class="list-unstyled">
+                    <li>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        Site name must contain at least 3 characters
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        Site URL must be a valid one
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
